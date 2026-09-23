@@ -3,332 +3,319 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)](https://www.python.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter)](https://jupyter.org/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-green?logo=scikit-learn)](https://scikit-learn.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
-## 1. Project Title
+## Project Title
 
 **AI-Powered Sales Data Analytics and Business Insights**
 
 ---
 
-## 2. Project Overview
+## Project Overview
 
-An end-to-end data analytics and machine learning project that analyses retail sales data, discovers actionable business insights, and uses AI/ML to predict sales revenue. Built as part of the **IBM SkillsBuild Data Analytics with AI Internship 2026** (BharatCares / AICTE).
-
----
-
-## 3. Problem Statement
-
-Retail businesses generate large volumes of transactional data but rarely extract actionable insights efficiently. This project addresses the challenge of transforming raw sales data into measurable business intelligence using data analytics and AI techniques.
+An end-to-end data analytics and machine learning project that analyses retail sales data, extracts actionable business insights, and uses supervised regression models to predict per-order Sales amounts. Built as part of the **IBM SkillsBuild Data Analytics with AI Internship 2026** (BharatCares / AICTE).
 
 ---
 
-## 4. Objectives
+## Problem Statement
 
-- Clean, validate, and explore a large sales dataset
-- Answer 14+ critical business questions with data evidence
-- Create 13+ professional, insight-driven visualisations
-- Build and compare three ML regression models for sales prediction
-- Generate AI-assisted business insights using a local rule-based engine
-- Provide actionable business recommendations
+Retail businesses accumulate large volumes of transactional data but rarely extract structured insights from it efficiently. This project addresses the challenge of turning raw sales records into measurable business intelligence by applying data analytics and machine learning techniques.
 
 ---
 
-## 5. Features
+## Objectives
 
-- ✅ Comprehensive data cleaning and preprocessing
-- ✅ Exploratory Data Analysis (EDA) with 13+ professional charts
-- ✅ Product, category, region, and segment performance analysis
-- ✅ Monthly and yearly sales trend analysis
-- ✅ Discount impact analysis
-- ✅ Machine learning: Linear Regression, Random Forest, Gradient Boosting
-- ✅ Model evaluation with MAE, RMSE, R² metrics
-- ✅ Feature importance analysis
-- ✅ AI-based rule-driven business insights (no external API required)
-- ✅ Actionable business recommendations
-
----
-
-## 6. Technologies Used
-
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| Python | 3.8+ | Core programming language |
-| Jupyter Notebook | Latest | Interactive development environment |
-| Pandas | Latest | Data manipulation and analysis |
-| NumPy | Latest | Numerical computing |
-| Matplotlib | Latest | Charting and visualisation |
-| Seaborn | Latest | Statistical visualisation |
-| Scikit-learn | Latest | ML models and evaluation |
-| python-docx | Latest | Report generation |
+1. Load, inspect, clean, and validate the sales dataset systematically.
+2. Engineer meaningful derived features for deeper analysis.
+3. Answer 14+ key business questions with data evidence.
+4. Create 13+ professional, insight-driven visualisations.
+5. Build a **per-order Sales prediction model** using a proper scikit-learn Pipeline.
+6. Compare three ML models (Linear Regression, Random Forest, Gradient Boosting).
+7. Evaluate models using MAE, RMSE, and R² on a held-out test set.
+8. Generate automated business insights using a local rule-based engine.
+9. Provide data-backed business recommendations.
 
 ---
 
-## 7. Dataset Description
+## Features
 
-| Field | Details |
-|-------|---------|
-| **Name** | Synthetic Superstore Sales Dataset |
-| **Type** | Synthetically generated (Python) |
-| **Records** | 10,000 rows |
-| **Columns** | 18 features |
-| **Time Period** | January 2021 – December 2023 |
-
-**Dataset Note:** The dataset used in this project is synthetically generated using Python for educational and internship demonstration purposes. It is modelled after the structure of publicly available Superstore-style retail datasets.
-
----
-
-## 8. Dataset Source / Dataset Link
-
-> **Reference Dataset (Structure):**  
-> Kaggle Superstore Sales Dataset  
-> 🔗 https://www.kaggle.com/datasets/himanshuuike/superstore-sales-dataset
-
-The synthetic dataset file is included in the repository at `data/sales_data.csv`.
+- Systematic data cleaning (missing values, duplicates, date validation, outlier analysis)
+- Comprehensive EDA: KPIs, categories, regions, segments, monthly and quarterly trends
+- 13+ professional charts (trend lines, heatmaps, scatter plots, bar charts, pie charts)
+- Per-order Sales prediction using a `ColumnTransformer` + `OneHotEncoder` + Regressor pipeline
+- Model comparison: Linear Regression vs Random Forest vs Gradient Boosting
+- Feature importance analysis
+- Automated Business Insight Engine (local, rule-based Python — no external API)
+- Data-backed business recommendations
 
 ---
 
-## 9. Project Structure
+## Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| Python 3.8+ | Core programming language |
+| Jupyter Notebook | Interactive analysis environment |
+| Pandas | Data manipulation and analysis |
+| NumPy | Numerical computing |
+| Matplotlib | Charting and visualisation |
+| Seaborn | Statistical data visualisation |
+| Scikit-learn | ML models, preprocessing pipeline, evaluation |
+| python-docx | Project report generation |
+
+---
+
+## Dataset
+
+### Actual Dataset Used in This Project
+
+> **File:** [`data/sales_data.csv`](data/sales_data.csv)  
+> **Type:** Synthetic Superstore-style Sales Dataset — generated using Python for educational and internship demonstration purposes.  
+> **Records:** 10,000 rows | **Columns:** 18 | **Period:** January 2021 – December 2023  
+> **Reproducible:** Fixed random seed (42) in `data/generate_dataset.py`
+
+The dataset is **not sourced from Kaggle or any real company**. It was programmatically generated to simulate realistic retail sales behaviour, including seasonal demand patterns, category-specific pricing, and discount distributions.
+
+### Reference Dataset (Structure Inspiration Only)
+
+> **Kaggle Superstore Sales Dataset:**  
+> https://www.kaggle.com/datasets/himanshuuike/superstore-sales-dataset  
+> *(Reference for dataset structure — not the data analysed in this project)*
+
+---
+
+## Project Structure
 
 ```
 AI-Sales-Analytics/
 │
 ├── data/
-│   ├── sales_data.csv          ← Synthetic sales dataset (10,000 records)
-│   └── generate_dataset.py     ← Dataset generation script
+│   ├── sales_data.csv             ← Actual dataset (10,000 records, synthetic)
+│   └── generate_dataset.py        ← Dataset generation script
 │
 ├── notebooks/
-│   └── DharvPatel_AI_Sales_Analytics.ipynb  ← Main Jupyter Notebook
+│   └── DharvPatel_AI_Sales_Analytics.ipynb  ← Main notebook (27 sections)
 │
 ├── src/
-│   ├── analysis.py             ← Reusable analysis helper functions
-│   └── build_notebook.py       ← Notebook generation script
+│   ├── analysis.py                ← Reusable helper functions
+│   ├── build_notebook.py          ← Notebook builder script
+│   └── generate_report.py         ← Word report generator
 │
 ├── report/
-│   └── DharvPatel_AI_Sales_Analytics_ProjectReport.docx  ← Project Report
+│   └── DharvPatel_AI_Sales_Analytics_ProjectReport.docx
 │
-├── requirements.txt            ← Python dependencies
-├── README.md                   ← This file
-├── PRESENTATION_AND_VIVA.md   ← Viva preparation guide
-└── .gitignore                  ← Git exclusions
+├── requirements.txt
+├── README.md
+├── PRESENTATION_AND_VIVA.md
+└── .gitignore
 ```
 
 ---
 
-## 10. Methodology
+## Methodology
 
 ```
-Raw Data → Data Cleaning → Feature Engineering → EDA → Visualisation
-    → ML Model Training → Model Evaluation → Business Insights → Recommendations
+Data Loading → Inspection → Cleaning → Feature Engineering
+    → EDA & Visualisation → ML Pipeline Build → Model Training
+        → Model Evaluation → Automated Insight Engine → Recommendations
 ```
 
-### Step-by-Step:
-1. **Data Collection:** Load synthetic sales dataset (CSV)
-2. **Inspection:** Shape, dtypes, missing values, duplicates
-3. **Cleaning:** Handle missing values, remove duplicates, fix data types, detect invalid values
-4. **Feature Engineering:** Add Year, Month, Quarter, Profit_Margin, Discount_Amount
-5. **EDA:** KPI computation, category/region/segment/monthly analysis
-6. **Visualisation:** 13+ charts (trends, bar charts, scatter plots, heatmaps)
-7. **ML Training:** Linear Regression, Random Forest, Gradient Boosting
-8. **Evaluation:** MAE, MSE, RMSE, R² metrics + Actual vs Predicted plot
-9. **Insights:** Rule-based Python insight engine (no API)
-10. **Recommendations:** Actionable business strategy based on findings
+### Data Cleaning
+- Missing value detection (`isnull().sum()`) and handling (median/mode fill)
+- Duplicate detection and removal (`drop_duplicates()`)
+- Data type verification (datetime, float, int, string)
+- Date validity check (Ship_Date ≥ Order_Date)
+- Out-of-range value detection (Discount ∈ [0,1], Sales > 0)
+- Outlier flagging using IQR method (retained for realistic analysis)
+
+### EDA
+- KPIs: Total Revenue, Total Profit, Total Orders, Average Order Value, Profit Margin
+- Product, category, sub-category, region, segment performance
+- Monthly, quarterly, yearly trends
+- Discount-Profit correlation analysis
+
+### Visualisations (13+ charts)
+
+| # | Chart | Type |
+|---|-------|------|
+| 1 | Monthly Sales Trend | Line with fill |
+| 2 | Monthly Profit Trend | Bar chart |
+| 3 | Revenue by Category | Bar + Pie |
+| 4 | Revenue vs Profit by Category | Grouped bar |
+| 5 | Revenue and Profit by Region | Bar |
+| 6 | Top 10 Products by Revenue | Horizontal bar |
+| 7 | Top 10 Products by Profit | Horizontal bar |
+| 8 | Sales vs Profit by Category | Scatter |
+| 9 | Discount vs Profit | Colour-mapped scatter |
+| 10 | Quantity vs Revenue | Scatter |
+| 11 | Monthly Sales Heatmap | Seaborn heatmap |
+| 12 | Correlation Heatmap | Seaborn heatmap |
+| 13 | Revenue by Customer Segment | Bar + Pie |
 
 ---
 
-## 11. Data Cleaning
+## Machine Learning — Per-Order Sales Prediction
 
-- Missing value detection and handling (median for numerical, mode for categorical)
-- Duplicate row detection and removal
-- Data type verification (datetime, float, integer, string)
-- Date validity checks (Ship_Date ≥ Order_Date)
-- Invalid value detection (negative sales, out-of-range discounts)
-- Outlier analysis using the IQR method (flagged but retained for realistic analysis)
+**Task:** Supervised Regression — predict `Sales` (net revenue per order)
 
----
+> This is a **per-order Sales prediction model**, not a time-series demand forecast.  
+> The model estimates the revenue of an individual order given its transaction attributes.
 
-## 12. Exploratory Data Analysis
+**Preprocessing Pipeline (`ColumnTransformer`):**
+- Numerical features (passed through): `Month`, `Quarter`, `Year`, `Quantity`, `Discount`, `Unit_Price`
+- Categorical features (OneHotEncoded): `Category`, `Region`, `Segment`, `Ship_Mode`, `Payment_Method`
 
-KPIs computed:
-- Total Revenue, Total Profit, Total Orders
-- Average Order Value, Average Profit, Average Discount
-- Overall Profit Margin
-
-Analyses performed:
-- Product, category, sub-category, region, segment, monthly, quarterly performance
-- Discount impact on profit
-- Seasonal patterns
-
----
-
-## 13. Machine Learning Approach
-
-**Task:** Sales (Revenue) Regression — Predict net sales per order
-
-**Features:** Month, Quarter, Year, Category (encoded), Region (encoded), Segment (encoded), Quantity, Discount, Unit_Price
+**Target leakage prevention:** `Profit`, `Revenue`, `Profit_Margin`, and all Sales-derived columns are excluded from model inputs.
 
 **Models:**
 
-| Model | Type | Reason Selected |
-|-------|------|----------------|
-| Linear Regression | Baseline | Interpretable, fast |
-| Random Forest Regressor | Ensemble | Handles non-linearity, robust |
-| Gradient Boosting Regressor | Ensemble | High accuracy, complex patterns |
+| Model | Type |
+|-------|------|
+| Linear Regression | Baseline — interpretable |
+| Random Forest Regressor | Ensemble bagging — non-linear patterns |
+| Gradient Boosting Regressor | Ensemble boosting — high accuracy |
 
-**Evaluation Metrics:** MAE, MSE, RMSE, R²
-
----
-
-## 14. AI-Based Insights
-
-A **local, rule-based Python insight engine** automatically inspects computed metrics and generates natural-language business insights. No external LLM, API key, or internet connection is required. This approach ensures the project is:
-- Fully reproducible offline
-- Transparent and explainable
-- 100% verifiable (insights tied to actual computed values)
+**Split:** 80% training / 20% testing | `random_state=42`
 
 ---
 
-## 15. Key Findings
+## Model Evaluation
 
-1. Clear Q4 seasonal demand spikes (November–December)
-2. Technology category drives the highest revenue
-3. Office Supplies delivers the best profit margins
-4. Discounts above 20% significantly erode profitability
-5. A small number of products generate a disproportionate share of revenue
-6. Random Forest and Gradient Boosting models show the best prediction performance
+Evaluated on the 20% held-out test set. Actual metrics computed when notebook is executed:
+
+| Model | MAE (USD) | RMSE (USD) | R² |
+|-------|-----------|------------|----|
+| Linear Regression | $373.62 | $633.99 | 0.7129 |
+| Random Forest Regressor | $48.52 | $135.23 | 0.9869 |
+| **Gradient Boosting Regressor** | **$67.47** | **$133.38** | **0.9873** |
+
+**Best model: Gradient Boosting Regressor** — R² = 0.9873, RMSE = $133.38 per order.
+
+> These values were computed by executing the notebook on the synthetic dataset.  
+> Re-running the notebook with `random_state=42` will reproduce these exact metrics.
+
+**Metric interpretation:**
+- **MAE:** Average absolute prediction error per order (in USD)
+- **RMSE:** Typical prediction error per order (in USD, penalises large errors)
+- **R²:** Proportion of variance in Sales explained by the model (0–1)
 
 ---
 
-## 16. Business Recommendations
+## Automated Business Insight Engine
 
-1. 🔴 Implement a 20% maximum discount policy to protect margins
-2. 🔴 Pre-stock Technology products before Q4 to capture peak demand
-3. 🟡 Launch targeted marketing in the lowest-performing region
-4. 🟡 Develop loyalty programmes for the top customer segment
-5. 🟢 Use the ML model for quarterly sales forecasting
+A **local, rule-based Python system** that programmatically inspects computed metrics and generates natural-language business observations. No external AI API (ChatGPT, Gemini, IBM Watson, etc.) is used.
+
+Insights generated include:
+- Top revenue and margin categories
+- Regional revenue comparison and gap analysis
+- Seasonal demand peak identification
+- Discount impact quantification (Pearson correlation + percentile analysis)
+- Top products by revenue and profit
+- Highest-revenue customer segment
+- ML model performance summary
+
+All insight statements are computed from actual data — no hard-coded claims.
 
 ---
 
-## 17. Installation Instructions
+## Key Findings
 
-### Prerequisites
-- Python 3.8 or higher
-- pip (Python package manager)
+*(Computed from the synthetic dataset — reproducible with `random_state=42`)*
 
-### Clone the Repository
+1. **Total Revenue:** $6,818,142.45 | **Total Profit:** $1,073,903.31 | **Overall Margin:** 15.75%
+2. **Technology** drives the highest revenue ($4,090,194.29). **Office Supplies** has the best profit margin (27.11%).
+3. **South** leads regionally ($1,747,085.95). **East** is lowest ($1,646,419.58) — gap of $100,666.37.
+4. **Sales peak in December** ($803,029.06) — clear Q4 seasonal demand spike confirmed.
+5. Discount–Profit correlation = **−0.155**. Orders at ≥30% discount show 45.2% lower average profit.
+6. Top revenue product: **Herman Miller Aeron Chair** ($523,828.45). Top profit product: **Dell XPS 15 Laptop** ($94,116.14).
+7. **Consumer** segment leads in revenue ($2,313,498.80).
+8. Best ML model: **Gradient Boosting Regressor** — R² = 0.9873, RMSE = $133.38 per order.
+
+---
+
+## Business Recommendations
+
+All recommendations are derived from the analysis:
+
+1. **Review high-discount transactions** where the computed Discount–Profit correlation indicates profitability risk at higher discount tiers.
+2. **Pre-stock Technology products before the identified seasonal peak month** to capture demand.
+3. **Target the lowest-revenue region** with marketing campaigns to close the measured revenue gap.
+4. **Focus retention strategies on the highest-revenue customer segment.**
+5. **Use the per-order prediction model** to estimate revenue for new order configurations.
+6. **Investigate low-margin product sub-categories** (particularly in Furniture) for cost or pricing optimisation.
+
+---
+
+## Installation
+
 ```bash
+# Clone the repository
 git clone https://github.com/YOUR_USERNAME/AI-Sales-Analytics.git
 cd AI-Sales-Analytics
-```
 
-### Create a Virtual Environment (Recommended)
-```bash
+# Create virtual environment (recommended)
 python -m venv venv
+venv\Scripts\activate        # Windows
+# source venv/bin/activate   # macOS / Linux
 
-# Windows
-venv\Scripts\activate
-
-# macOS / Linux
-source venv/bin/activate
-```
-
-### Install Dependencies
-```bash
+# Install dependencies
 pip install -r requirements.txt
 ```
 
 ---
 
-## 18. How to Run
+## How to Run
 
-### Option A: Run the Jupyter Notebook (Recommended)
-
+### Run the Jupyter Notebook
 ```bash
 jupyter notebook notebooks/DharvPatel_AI_Sales_Analytics.ipynb
 ```
+Then in Jupyter: **Kernel → Restart & Run All**
 
-Then click **"Run All"** in the Jupyter interface (Kernel → Restart & Run All).
-
-### Option B: Run with JupyterLab
-
-```bash
-jupyter lab notebooks/DharvPatel_AI_Sales_Analytics.ipynb
-```
-
-### Option C: Execute Notebook from Command Line
-
+### Execute notebook from command line
 ```bash
 jupyter nbconvert --to notebook --execute --inplace notebooks/DharvPatel_AI_Sales_Analytics.ipynb
 ```
 
----
-
-## 19. How to Regenerate the Dataset
-
-If you want to regenerate the synthetic dataset:
-
+### Regenerate the dataset
 ```bash
 python data/generate_dataset.py
 ```
 
-This creates a fresh `data/sales_data.csv` with 10,000 records.
-
----
-
-## 20. Example Results
-
-After running the notebook, you will see outputs such as:
-
-```
-KEY PERFORMANCE INDICATORS (KPIs)
-Total Revenue         : $X,XXX,XXX.XX
-Total Profit          : $XXX,XXX.XX
-Total Orders          : 10,000
-Total Quantity Sold   : XX,XXX
-Average Order Value   : $XXX.XX
-Overall Profit Margin : XX.XX%
+### Regenerate the Word report
+```bash
+python src/generate_report.py
 ```
 
-**ML Model Performance (sample):**
+---
 
-| Model | MAE | RMSE | R² |
-|-------|-----|------|----|
-| Linear Regression | ~$XXX | ~$XXX | ~0.XX |
-| Random Forest | ~$XXX | ~$XXX | ~0.XX |
-| Gradient Boosting | ~$XXX | ~$XXX | ~0.XX |
+## Limitations
 
-*(Actual values are computed when the notebook is executed)*
+- Dataset is synthetic and may not reflect all real-world complexities.
+- No external economic or competitive factors are modelled.
+- Per-order prediction only; dedicated time-series forecasting is identified as future scope.
+- Default hyperparameters used; tuning could improve performance.
 
 ---
 
-## 21. Limitations
+## Future Scope
 
-- Dataset is synthetic and may not capture all real-world complexities
-- No external economic factors included in ML features
-- Static batch analysis — not real-time
-- Simple label encoding used for categorical variables
-
----
-
-## 22. Future Scope
-
+- Time-series forecasting (ARIMA, SARIMA, Facebook Prophet) for period-level revenue prediction
+- Customer segmentation using K-Means clustering
+- Hyperparameter optimisation with GridSearchCV or Optuna
 - Real-time Streamlit dashboard
-- Time-series forecasting (ARIMA, Prophet)
-- Customer segmentation (K-Means clustering)
-- Advanced feature engineering and hyperparameter tuning
-- REST API deployment for the prediction model
+- REST API deployment using FastAPI
 
 ---
 
-## 23. Conclusion
+## Conclusion
 
-This project demonstrates a complete data analytics and AI pipeline applied to retail sales data. From cleaning raw data to generating ML-backed predictions and actionable business insights, the workflow reflects real-world data science practice.
+This project demonstrates a complete data analytics and ML pipeline: from raw synthetic sales data through cleaning, EDA, per-order Sales prediction, and automated insight generation to data-backed business recommendations. The project is reproducible, academically honest, and structured for professional presentation.
 
 ---
 
-## 24. Author
+## Author
 
 **Dharv Patel**  
 IBM SkillsBuild Data Analytics with AI Internship 2026  
@@ -336,15 +323,15 @@ Organisation: BharatCares / AICTE / IBM SkillsBuild
 
 ---
 
-## 25. References
+## References
 
-1. Kaggle Superstore Sales Dataset: https://www.kaggle.com/datasets/himanshuuike/superstore-sales-dataset
-2. Scikit-learn Documentation: https://scikit-learn.org/stable/
-3. Pandas Documentation: https://pandas.pydata.org/docs/
-4. Seaborn Documentation: https://seaborn.pydata.org/
-5. Matplotlib Documentation: https://matplotlib.org/stable/
+1. Kaggle Superstore Sales Dataset (structural reference): https://www.kaggle.com/datasets/himanshuuike/superstore-sales-dataset
+2. Scikit-learn: https://scikit-learn.org/stable/
+3. Pandas: https://pandas.pydata.org/docs/
+4. Matplotlib: https://matplotlib.org/
+5. Seaborn: https://seaborn.pydata.org/
 6. IBM SkillsBuild: https://skillsbuild.org/
 
 ---
 
-*This project is created for educational and internship demonstration purposes as part of the AICTE | IBM SkillsBuild Data Analytics with AI Internship 2026 | BharatCares.*
+*This project is submitted for the AICTE | IBM SkillsBuild Data Analytics with AI Internship 2026 | BharatCares.*

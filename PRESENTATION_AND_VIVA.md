@@ -1,126 +1,132 @@
 # Presentation & Viva Preparation Guide
 ## AI-Powered Sales Data Analytics and Business Insights
-### IBM SkillsBuild Data Analytics with AI Internship 2026 | BharatCares
+### IBM SkillsBuild Data Analytics with AI Internship 2026 | BharatCares / AICTE
 **Student: Dharv Patel**
 
 ---
 
 ## PART 1: 30-Second Project Introduction
 
-> *"My project is titled 'AI-Powered Sales Data Analytics and Business Insights.' In this project, I analysed a 10,000-record synthetic retail sales dataset using Python and Jupyter Notebook. I performed comprehensive data cleaning, exploratory data analysis with 13-plus professional visualisations, and built three machine learning models — Linear Regression, Random Forest, and Gradient Boosting — to predict sales revenue. I also created a rule-based AI insight engine that automatically generates actionable business recommendations from the data. The project answers 14 key business questions and provides data-driven insights on products, regions, categories, seasonal trends, and discount impact."*
+> *"My project is titled 'AI-Powered Sales Data Analytics and Business Insights.' I analysed a 10,000-record synthetic retail sales dataset using Python and Jupyter Notebook. The project covers comprehensive data cleaning, exploratory data analysis with 13 professional visualisations, and a machine learning pipeline that compares three regression models — Linear Regression, Random Forest, and Gradient Boosting — for per-order Sales prediction. I also built a local, rule-based Automated Business Insight Engine that converts computed metrics into readable business observations. The project answers 14 key business questions and provides data-backed recommendations on products, regions, seasonality, and discount impact."*
 
 ---
 
-## PART 2: 5–7 Minute Project Presentation Script
+## PART 2: 5–7 Minute Presentation Script
 
 ### Opening (30 seconds)
-> "Good [morning/afternoon]. I'm Dharv Patel, and I'm presenting my project: 'AI-Powered Sales Data Analytics and Business Insights' — built as part of the IBM SkillsBuild Data Analytics with AI Internship 2026. This is an end-to-end data analytics and machine learning project that takes raw sales data and transforms it into actionable business intelligence."
+> "Good [morning/afternoon]. I'm Dharv Patel, and I'm presenting 'AI-Powered Sales Data Analytics and Business Insights' — built for the IBM SkillsBuild Data Analytics with AI Internship 2026. This is a complete end-to-end data analytics and machine learning project that transforms raw sales data into actionable business intelligence."
 
 ---
 
 ### Problem Statement (30 seconds)
-> "The business problem I'm solving is this: retail businesses generate enormous amounts of transactional data every day, but meaningful insights are rarely extracted in a structured way. Managers need to know which products generate the most revenue, which regions are underperforming, how discounts affect profit, and what future sales might look like. My project answers all of these questions."
+> "The business challenge is simple: retail businesses collect vast amounts of transactional data but rarely extract structured insights efficiently. Managers need clarity on which products generate revenue, which regions underperform, how discounts affect profit, and how to estimate revenue for new orders. My project addresses all of these using data analytics and machine learning."
 
 ---
 
 ### Dataset (45 seconds)
-> "For this project, I created a synthetic sales dataset modelled after the popular Kaggle Superstore Sales Dataset. It contains 10,000 records spanning three years — 2021 to 2023 — with 18 columns covering order ID, dates, customer information, product details, geography, quantity, price, discount, sales, and profit. I chose a synthetic dataset to ensure full control over the data and to clearly demonstrate data generation, cleaning, and analysis without any proprietary data concerns."
+> "I used a synthetic Superstore-style sales dataset that I generated programmatically in Python. It contains 10,000 records, spanning January 2021 to December 2023, with 18 columns covering order information, product details, geography, pricing, discounts, sales, and profit. The dataset is designed to simulate realistic retail behaviour, including seasonal demand patterns. I used a fixed random seed of 42, so the entire project is fully reproducible. The Kaggle Superstore Sales Dataset was used only as a structural reference — the actual data analysed here is the synthetic file in the data folder."
 
 ---
 
 ### Methodology (1 minute)
-> "My workflow had seven stages:
-> First, data loading and inspection — I printed the shape, column names, data types, and summary statistics.
-> Second, data cleaning — I checked for missing values, duplicates, invalid dates, and out-of-range discount values.
-> Third, feature engineering — I added derived columns like Year, Month, Profit Margin, and Discount Amount.
-> Fourth, EDA — I computed KPIs like total revenue, profit, average order value, and analysed performance across categories, regions, segments, and time periods.
-> Fifth, visualisation — I created 13 professional charts including trend lines, bar charts, scatter plots, heatmaps, and pie charts.
-> Sixth, machine learning — I trained three regression models to predict sales.
-> Seventh, AI-based insights — I used a Python rule engine to generate business recommendations from the actual data."
+> "My workflow has seven stages:
+> First, data loading and inspection — shape, column names, data types, missing values, duplicates.
+> Second, data cleaning — handling missing values, removing duplicates, validating dates and value ranges.
+> Third, feature engineering — adding Year, Month, Quarter, Profit_Margin, and Discount_Amount columns.
+> Fourth, EDA — computing KPIs and analysing performance across categories, regions, segments, and time.
+> Fifth, visualisation — 13 professional charts covering trends, comparisons, correlations, and distributions.
+> Sixth, machine learning — a per-order Sales prediction model using a scikit-learn Pipeline with proper preprocessing.
+> Seventh, automated insights — a local rule-based engine that reads actual computed metrics and generates business observations."
 
 ---
 
 ### Key Findings (1 minute)
-> "My key findings were:
-> First: Sales peak significantly in November and December, showing a strong seasonal pattern that businesses should plan inventory around.
-> Second: Technology products generate the highest total revenue, while Office Supplies have the best profit margins.
-> Third: Discounts above 20% significantly erode profit margins — there's a clear negative correlation between discount and profit.
-> Fourth: A small number of top products account for a disproportionate share of total revenue — a Pareto pattern.
-> Fifth: The business has a consistent positive profit margin overall across all three years."
+> "My key findings, based on the actual computed data:
+> First: Technology drives the highest total revenue. Office Supplies has the best profit margin percentage.
+> Second: Sales peak clearly in November and December — a strong holiday-season seasonal pattern.
+> Third: There is a statistically negative correlation between Discount and Profit. Orders at higher discount levels show meaningfully lower average profit.
+> Fourth: A small number of products account for a disproportionate share of total revenue — a classic Pareto pattern.
+> Fifth: Revenue is broadly distributed across all four regions, with a measurable gap between the top and bottom performers."
 
 ---
 
 ### Machine Learning (1.5 minutes)
-> "For the ML component, I trained three regression models to predict Sales per order.
-> Linear Regression was my baseline — it's simple and interpretable.
-> Random Forest is an ensemble method that builds many decision trees and averages their predictions — it handles non-linear relationships well.
-> Gradient Boosting is another ensemble method that builds trees sequentially, each correcting the errors of the previous one.
-> I split the data 80-20 into training and testing sets and evaluated each model using MAE, RMSE, and R-squared.
-> MAE tells us the average absolute prediction error in dollars.
-> RMSE is similar but penalises large errors more heavily.
-> R-squared tells us what percentage of sales variance the model explains.
-> The ensemble models — Random Forest and Gradient Boosting — outperformed Linear Regression, which is expected since sales data has non-linear patterns. I also plotted feature importance, which showed that Unit Price and Quantity are the strongest predictors of sales."
+> "For the ML component, I built a supervised regression pipeline to predict the Sales amount for individual orders.
+> I want to be precise about what this model does: it predicts how much revenue a single order will generate given its attributes. This is a per-order prediction — not a time-series forecast of total future revenue.
+> I used a scikit-learn Pipeline that chains a ColumnTransformer preprocessing step with the regression model. The ColumnTransformer passes numerical features through unchanged and applies OneHotEncoding to categorical features like Category, Region, Segment, Ship_Mode, and Payment_Method.
+> I was careful to avoid target leakage — I did not use Profit, Profit_Margin, or any Sales-derived column as model inputs.
+> I trained three models: Linear Regression as the interpretable baseline, Random Forest which handles non-linear relationships through ensemble averaging, and Gradient Boosting which builds trees sequentially, each correcting the previous one's errors.
+> I evaluated all three on the held-out 20% test set using MAE, RMSE, and R². The ensemble models significantly outperformed Linear Regression, with Random Forest and Gradient Boosting achieving high R² values — meaning they explain a large proportion of the variation in per-order Sales."
 
 ---
 
-### AI-Based Insights (30 seconds)
-> "My AI insight engine is a local, rule-based Python system. It inspects the actual computed metrics and automatically generates natural-language business insights. For example: it identifies the top revenue product, flags regions that underperform, and highlights the discount-profit trade-off. No external API is used — everything runs locally, making it fully reproducible."
+### ML Metrics (30 seconds)
+> "Regarding how to interpret R²: if R² is 0.98, I say 'the model explained 98% of the variance in Sales on the test set' — I do not say 'the model is 98% accurate.' R² and accuracy are different things. Accuracy applies to classification; R² applies to regression and measures explanatory power, not prediction precision."
 
 ---
 
-### Recommendations & Close (30 seconds)
-> "Based on the analysis, my top recommendations are: implement a 20% discount cap to protect margins, pre-stock Technology products before Q4, launch targeted marketing in the weakest region, and use the ML model for quarterly sales forecasting.
-> Overall, this project demonstrates how data analytics combined with AI can turn raw transactional data into a powerful decision-making tool for any retail business. Thank you."
+### Automated Business Insights (30 seconds)
+> "My Automated Business Insight Engine is a local rule-based Python system. It reads the actual computed metrics — revenue totals, category rankings, regional comparisons, discount correlations, model performance — and generates structured business observations automatically. There is no external AI API. This is honest about what the system is: a rule-based insight generator, not a generative AI system."
 
 ---
 
-## PART 3: Complete Project Workflow Explanation
+### Recommendations and Close (30 seconds)
+> "My business recommendations are all data-backed: review high-discount transactions where the analysis shows reduced profitability; pre-stock Technology products before the identified seasonal peak; target the lowest-revenue region with marketing to reduce the measured gap; and use the trained ML model to estimate revenue for new order configurations.
+> Overall, this project shows how data analytics and machine learning, applied systematically to transactional data, can drive evidence-based business decisions. Thank you."
+
+---
+
+## PART 3: Complete Project Workflow
 
 ```
-Step 1: DATA GENERATION
-        Python script creates 10,000 realistic sales records
-        (3 categories, 4 regions, multiple products, date range 2021-2023)
+Step 1: DATASET GENERATION
+        Python script (data/generate_dataset.py) creates 10,000 realistic
+        synthetic sales records with fixed seed=42 for reproducibility.
+        Categories: Technology, Furniture, Office Supplies
+        Regions: East, West, Central, South (2021-2023)
 
 Step 2: DATA LOADING
-        pd.read_csv() loads the CSV into a Pandas DataFrame
+        pd.read_csv() loads data/sales_data.csv
         parse_dates converts Order_Date and Ship_Date to datetime
 
 Step 3: DATA INSPECTION
         Shape, dtypes, head(), isnull().sum(), duplicated().sum(), describe()
 
 Step 4: DATA CLEANING
-        - Missing values → filled with median (numeric) or mode (categorical)
-        - Duplicates → drop_duplicates()
-        - Date validation → remove Ship_Date < Order_Date
-        - Outlier flagging → IQR method (kept for realistic analysis)
+        Missing value check and handling (median/mode)
+        Duplicate detection and removal
+        Date validation (Ship_Date >= Order_Date)
+        Value range checks (Discount in [0,1], Sales > 0)
+        Outlier analysis via IQR (flagged, retained)
 
 Step 5: FEATURE ENGINEERING
-        - Year = Order_Date.dt.year
-        - Month = Order_Date.dt.month
-        - Quarter = Order_Date.dt.quarter
-        - Profit_Margin = Profit / Sales × 100
-        - Discount_Amount = Unit_Price × Quantity × Discount
+        Year, Month, Month_Name, Quarter from Order_Date
+        Profit_Margin = Profit / Sales x 100
+        Discount_Amount = Unit_Price x Quantity x Discount
 
 Step 6: EDA
-        - KPIs: Revenue, Profit, Orders, Avg Order Value
-        - Groupby analysis: Category, Region, Segment, Month, Year
-        - Correlation analysis: Discount vs Profit
+        KPIs: Total Revenue, Profit, Orders, Avg Order Value, Margin
+        Groupby: Category, Region, Segment, Month, Year, Sub_Category
+        Discount analysis by discount tier
 
-Step 7: VISUALISATION
-        - 13 charts covering trends, categories, regions, products, correlations
+Step 7: VISUALISATION (13 charts)
+        Monthly Sales/Profit trend, Category/Region performance
+        Top 10 products, scatter plots, heatmaps, segment analysis
 
-Step 8: ML MODELLING
-        - Feature selection and encoding
-        - 80/20 train-test split
-        - Train 3 models, predict, evaluate
+Step 8: ML PIPELINE
+        ColumnTransformer: passthrough numeric, OneHotEncode categorical
+        Train/test split: 80/20, random_state=42
+        Pipeline: preprocessor + estimator
+        Train: LinearRegression, RandomForestRegressor, GradientBoostingRegressor
+        Evaluate: MAE, RMSE, R2 on test set
 
-Step 9: AI INSIGHTS
-        - Rule-based engine reads computed values
-        - Generates 8-10 structured business insights
+Step 9: AUTOMATED INSIGHTS
+        Rule-based engine reads actual computed metrics
+        Generates 9 structured business observations
+        No external API
 
-Step 10: REPORTING
-        - Word document with complete academic report
-        - README with setup and usage instructions
+Step 10: RECOMMENDATIONS
+        Data-backed recommendations derived from computed findings
 ```
 
 ---
@@ -128,247 +134,288 @@ Step 10: REPORTING
 ## PART 4: Technology Explanations
 
 ### Python
-Python is a high-level, general-purpose programming language widely used in data science and machine learning. It has a rich ecosystem of libraries for every step of the data analytics pipeline.
+High-level, general-purpose programming language. The dominant language in data science due to its readable syntax and rich ecosystem of analytics libraries.
 
 ### Jupyter Notebook
-Jupyter Notebook is an interactive computing environment that allows combining code, visualisations, and markdown text in a single document. It's the industry standard for data science prototyping and presentation.
+Interactive computing environment that combines code, output, visualisations, and markdown text in a single document. Industry standard for data science presentation.
 
 ### Pandas
-Pandas is the primary Python library for data manipulation. It provides the DataFrame structure (like an Excel table in code) and thousands of functions for filtering, grouping, merging, and transforming data.
+Primary library for tabular data manipulation. Provides the DataFrame structure and thousands of operations for filtering, grouping, aggregating, and transforming data.
 
 ### NumPy
-NumPy provides fast numerical computing in Python, including array operations, mathematical functions, random number generation, and linear algebra. Pandas is built on top of NumPy.
+Numerical computing library. Provides fast array operations, mathematical functions, and statistical methods. Pandas is built on NumPy.
 
 ### Matplotlib
-Matplotlib is the foundational Python plotting library. It provides fine-grained control over chart appearance and supports line charts, bar charts, scatter plots, and more.
+Foundational Python plotting library. Provides fine-grained control over chart appearance including line charts, bar charts, scatter plots, and heatmaps.
 
 ### Seaborn
-Seaborn is a statistical visualisation library built on Matplotlib. It makes it easier to create attractive and informative plots like heatmaps, violin plots, and pair plots with less code.
+Statistical data visualisation library built on Matplotlib. Simplifies creating attractive heatmaps, distribution plots, and pair plots.
 
 ### Scikit-learn
-Scikit-learn is the most popular Python machine learning library. It provides ready-to-use implementations of hundreds of ML algorithms, plus tools for data splitting, preprocessing, and evaluation.
+Most widely used Python ML library. Provides: model implementations (LinearRegression, RandomForest, GradientBoosting), preprocessing utilities (OneHotEncoder, ColumnTransformer), pipeline tools (Pipeline), model selection (train_test_split), and evaluation metrics (MAE, RMSE, R²).
+
+### python-docx
+Library for generating and editing Microsoft Word (.docx) documents programmatically. Used to generate the project report.
 
 ---
 
 ## PART 5: Dataset Explanation
 
 **What is the dataset?**
-A synthetic 10,000-record retail sales dataset modelled after the Kaggle Superstore Sales Dataset. It simulates 3 years (2021-2023) of sales across:
+A synthetic 10,000-record retail sales dataset generated using Python (data/generate_dataset.py) with fixed random seed 42. It simulates 3 years of sales (2021–2023) across:
 - 3 product categories (Technology, Furniture, Office Supplies)
-- Multiple sub-categories and products
+- Multiple sub-categories and products with realistic prices
 - 4 geographic regions (East, West, Central, South)
 - 3 customer segments (Consumer, Corporate, Home Office)
-- Various discount levels, payment methods, and shipping modes
+- Realistic seasonal patterns (higher sales in Nov–Dec)
+- Variable discount levels and multiple payment/shipping methods
 
 **Why synthetic?**
-Using a synthetic dataset eliminates concerns about data privacy, proprietary information, and Kaggle authentication. It also demonstrates the ability to create and validate data programmatically.
+Eliminates data privacy concerns, avoids Kaggle authentication requirements, and demonstrates the ability to generate, validate, and analyse data programmatically. The dataset structure mirrors real retail sales data.
 
-**Is it realistic?**
-Yes. The dataset includes seasonal patterns (higher sales in Nov-Dec), realistic price ranges, category-specific profit margins, and a distribution of discount levels that mimics real retail behaviour.
+**What is the Kaggle dataset?**
+The Kaggle Superstore Sales Dataset (https://www.kaggle.com/datasets/himanshuuike/superstore-sales-dataset) is cited as a structural reference only. The project analyses the synthetic file (data/sales_data.csv), not the Kaggle dataset.
 
 ---
 
 ## PART 6: Data Cleaning Explanation
 
-**Why is data cleaning important?**
-"Garbage in, garbage out." If the data has errors, missing values, or inconsistencies, any analysis built on it will be unreliable. Data cleaning ensures the analysis is based on accurate, consistent data.
+**Why clean data?**
+"Garbage in, garbage out" — errors and inconsistencies in input data propagate to incorrect analysis results. Cleaning ensures the analysis is based on accurate, consistent data.
 
 **Steps performed:**
-1. **Missing value detection** — `df.isnull().sum()` counts missing values per column
-2. **Missing value handling** — Numerical columns filled with median (robust to outliers); categorical with mode
-3. **Duplicate detection** — `df.duplicated().sum()` counts exact duplicate rows
-4. **Duplicate removal** — `df.drop_duplicates()` removes them
-5. **Data type verification** — Ensures dates are datetime, numbers are float/int
-6. **Date validation** — Checks Ship_Date is always after Order_Date
-7. **Outlier analysis** — IQR method identifies statistical outliers (kept but noted)
+1. Missing value check — `df.isnull().sum()` per column
+2. Missing value handling — numeric: median fill; categorical: mode fill
+3. Duplicate detection — `df.duplicated().sum()`
+4. Duplicate removal — `df.drop_duplicates()`
+5. Data type verification — dates as datetime, numerics as float/int
+6. Date validity — Ship_Date must be >= Order_Date
+7. Value range checks — Discount in [0,1], Sales > 0
+8. Outlier analysis — IQR method (flagged, retained for realistic analysis)
 
 ---
 
 ## PART 7: EDA Explanation
 
 **What is EDA?**
-Exploratory Data Analysis is the process of examining a dataset to understand its structure, patterns, relationships, and anomalies — before building any models. It's about "getting to know the data."
+Exploratory Data Analysis is the process of systematically examining a dataset to understand its structure, distributions, relationships, and anomalies before building models.
 
-**What we computed:**
-- Total Revenue, Total Profit, Total Orders
-- Average Order Value, Average Profit Margin
-- Revenue and profit by Category, Region, Segment, Month, Year
-- Discount impact on profit (correlation)
+**KPIs computed:**
+- Total Revenue (sum of Sales)
+- Total Profit (sum of Profit)
+- Total Orders (unique Order_IDs)
+- Total Quantity Sold
+- Average Order Value (mean of Sales)
+- Average Profit per Order
+- Average Discount rate
+- Overall Profit Margin (Total Profit / Total Revenue × 100)
 
 **Why EDA matters:**
-EDA guides the entire analysis. It tells us which variables are important, what data issues exist, and what hypotheses to test with machine learning.
+Reveals data quality issues, guides feature selection for ML, and identifies the business findings that form the project's conclusions.
 
 ---
 
 ## PART 8: Chart Explanations
 
-| Chart | What It Shows |
-|-------|---------------|
-| Monthly Sales Trend | Sales fluctuation over 36 months; reveals seasonality and growth |
-| Monthly Profit Trend | Profit in each month; shows periods of high/low profitability |
-| Revenue by Category | Which of the 3 categories earns most revenue |
-| Profit by Category | Revenue vs Profit side-by-side + profit margin percentage |
-| Revenue & Profit by Region | Geographic performance comparison |
-| Top 10 Products by Revenue | Highest-selling individual products |
-| Top 10 Products by Profit | Most profitable individual products |
-| Sales vs Profit (scatter) | Relationship between sales and profit, coloured by category |
-| Discount vs Profit (scatter) | Shows how higher discounts reduce profit |
-| Quantity vs Revenue | How order volume relates to revenue |
-| Monthly Heatmap | Year × Month grid; quickly spots seasonal patterns |
-| Correlation Heatmap | Numerical feature correlations in a colour matrix |
-| Segment Distribution | Revenue and share across Consumer/Corporate/Home Office |
+| Chart | What it shows |
+|-------|--------------|
+| Monthly Sales Trend | 36-month sales pattern; confirms seasonality and growth |
+| Monthly Profit Trend | Monthly profit; shows periods of high/low profitability |
+| Revenue by Category | Relative revenue contribution of 3 product categories |
+| Revenue vs Profit by Category | Revenue vs Profit bars + profit margin % annotation |
+| Revenue & Profit by Region | 4-region geographic comparison |
+| Top 10 Products by Revenue | Highest-selling products individually |
+| Top 10 Products by Profit | Most profitable products individually |
+| Sales vs Profit (scatter) | Order-level relationship, coloured by category |
+| Discount vs Profit (scatter) | Negative relationship between discount and profit |
+| Quantity vs Revenue (scatter) | Volume-revenue relationship by category |
+| Monthly Heatmap | Year × Month grid; seasonal patterns at a glance |
+| Correlation Heatmap | Pearson correlations between all numerical features |
+| Segment Distribution | Revenue share across Consumer/Corporate/Home Office |
 
 ---
 
-## PART 9: ML Model Explanation
+## PART 9: ML Preprocessing Pipeline Explanation
 
-**What problem does ML solve here?**
-Given the features of an order (what product category, which region, what quantity, what discount, what price, what time of year), can we predict how much revenue (Sales) that order will generate?
+**Why use a Pipeline?**
+A scikit-learn Pipeline chains preprocessing and model steps into a single object. This ensures:
+1. Preprocessing is applied identically to training and test data
+2. No data leakage from the test set during preprocessing
+3. A single `.fit()` / `.predict()` interface for the entire ML workflow
 
-**Features (inputs to the model):**
-- Month (1-12): captures seasonality
-- Quarter (1-4): groups months into quarters
-- Year: captures year-over-year trends
-- Category (encoded): product category
-- Region (encoded): geographic area
-- Segment (encoded): customer type
-- Quantity: number of units ordered
-- Discount: discount rate applied
-- Unit_Price: price per unit
+**ColumnTransformer:**
+Applies different transformations to different column types in one step:
+- Numerical features: "passthrough" (no transformation needed)
+- Categorical features: OneHotEncoding (converts text labels to binary columns)
 
-**Why these features?**
-These are the factors a sales manager would consider when estimating order value. Unit Price and Quantity are mathematically the most influential (Sales = Price × Quantity × (1-Discount)), but category, region, and seasonality add context.
+**OneHotEncoder:**
+Converts a categorical column with k unique values into k binary (0/1) columns. For example, "Category" with values Technology/Furniture/Office Supplies becomes 3 binary columns.
 
-**Train/Test Split:**
-80% of data is used to train the model; 20% is held back for testing. The model never sees the test data during training, so test performance reflects real-world generalisation ability.
+**Target leakage prevention:**
+We only use features that would logically be known at the time of order creation. We exclude Profit, Profit_Margin, Revenue (alias for Sales), and Discount_Amount because these are either derived from Sales (the target) or only known after a sale completes.
 
 ---
 
-## PART 10: Evaluation Metrics Explanation
+## PART 10: ML Model Explanations
 
-### MAE (Mean Absolute Error)
-**Definition:** Average of the absolute differences between actual and predicted sales values.  
-**Formula:** MAE = (1/n) × Σ|actual - predicted|  
-**Example:** MAE = $150 means on average, predictions are off by $150  
-**Interpretation:** Lower is better. Easy to understand in the original units (dollars).
+### Linear Regression
+Fits a linear equation: Sales = b₀ + b₁×Feature₁ + b₂×Feature₂ + ...
+- Assumes linear relationship between features and Sales
+- Fast to train, easy to interpret
+- Baseline for comparison
 
-### MSE (Mean Squared Error)
-**Definition:** Average of squared differences between actual and predicted values.  
-**Formula:** MSE = (1/n) × Σ(actual - predicted)²  
-**Interpretation:** Penalises large errors more than small ones. Lower is better.
+### Random Forest Regressor
+Ensemble of 100 decision trees (n_estimators=100):
+- Each tree trained on a random bootstrap sample of data
+- Each split considers a random subset of features
+- Final prediction = average of all tree predictions
+- Handles non-linear patterns, robust to outliers
+- Feature importance available from tree structure
 
-### RMSE (Root Mean Squared Error)
-**Definition:** Square root of MSE — brings the metric back to original units (dollars).  
-**Formula:** RMSE = √MSE  
-**Example:** RMSE = $200 means typical prediction error is about $200  
-**Interpretation:** Lower is better. More sensitive to large errors than MAE.
-
-### R² (R-Squared / Coefficient of Determination)
-**Definition:** Proportion of variance in actual sales explained by the model.  
-**Formula:** R² = 1 - (SS_residual / SS_total)  
-**Range:** 0 to 1 (higher is better; 1 = perfect prediction)  
-**Example:** R² = 0.85 means the model explains 85% of the variation in sales  
-**Interpretation:** R² = 0 means the model is no better than always predicting the mean.
+### Gradient Boosting Regressor
+Sequential ensemble of 100 trees:
+- Each tree corrects the prediction errors of the previous tree
+- Starts with a simple model, iteratively improves
+- Often achieves highest accuracy but is slower and more prone to overfitting than Random Forest
+- Final prediction = sum of all tree contributions
 
 ---
 
-## PART 11: AI-Based Insights Explanation
+## PART 11: Evaluation Metrics Explanation
 
-**What is the insight engine?**
-A Python function that reads the actual computed metrics (total revenue, profit margin, top category, regional performance, seasonal peaks, etc.) and generates structured natural-language business statements based on if/else rules and thresholds.
+### MAE — Mean Absolute Error
+**Formula:** Average of |actual Sales - predicted Sales|
+**Units:** USD
+**Interpretation:** "On average, the model's prediction differs from actual Sales by $X per order."
+**Usage:** Easy to understand; not affected by extreme errors.
 
-**Why not ChatGPT or Gemini?**
-External AI APIs require API keys, internet access, and can produce hallucinated results. A rule-based engine is:
-- Fully transparent (we can see exactly why each insight was generated)
-- Reproducible (same data always produces the same insights)
-- Offline (no internet required)
-- Academically honest (no black-box generation)
+### MSE — Mean Squared Error
+**Formula:** Average of (actual - predicted)²
+**Units:** USD²
+**Interpretation:** Penalises large prediction errors more than small ones.
+**Usage:** Differentiable — useful for training gradient-based models.
 
-**Is this still "AI"?**
-Yes. Rule-based systems and expert systems are a classical form of Artificial Intelligence. Not all AI requires deep learning. This engine applies domain knowledge (business rules) to transform data into decisions — which is the core definition of AI.
+### RMSE — Root Mean Squared Error
+**Formula:** √MSE
+**Units:** USD (same as Sales)
+**Interpretation:** "The typical prediction error is approximately $X per order."
+**Usage:** More interpretable than MSE; more sensitive to large errors than MAE.
 
----
-
-## PART 12: 15 Likely Viva Questions with Answers
-
-**Q1. What is the main objective of your project?**  
-A: To analyse a retail sales dataset using data analytics and machine learning, discover actionable business insights, predict sales revenue, and present findings that can drive business decisions.
-
-**Q2. Why did you choose a synthetic dataset instead of real data?**  
-A: The Kaggle dataset requires authentication. Using a synthetic dataset allows me to demonstrate all the same analytics techniques with full control over the data. I clearly documented it as synthetic in all files. The data structure mirrors real Superstore datasets.
-
-**Q3. What is EDA and why is it important?**  
-A: EDA — Exploratory Data Analysis — is the process of examining a dataset to understand its structure, patterns, and relationships before building any models. It's important because it reveals data quality issues, guides feature selection, and helps form hypotheses for modelling.
-
-**Q4. What data cleaning steps did you perform?**  
-A: Missing value detection and handling, duplicate detection and removal, data type verification, date validation (Ship_Date ≥ Order_Date), invalid value checks (negative sales, out-of-range discounts), and outlier analysis using the IQR method.
-
-**Q5. What is feature engineering? What features did you create?**  
-A: Feature engineering is creating new informative columns from existing ones. I created: Year, Month, Month_Name, Quarter (from Order_Date), Profit_Margin (Profit/Sales × 100), and Discount_Amount (Unit_Price × Quantity × Discount).
-
-**Q6. Why did you use three machine learning models?**  
-A: Using multiple models allows comparison. Linear Regression is the interpretable baseline. Random Forest and Gradient Boosting are ensemble methods that handle non-linear patterns better. Comparing their performance identifies the best model for deployment.
-
-**Q7. What is R-squared and what does your model's R² score mean?**  
-A: R-squared measures how much of the variance in actual sales is explained by the model. For example, R² = 0.85 means the model explains 85% of the variation in sales. A higher R² (closer to 1) means better predictive performance.
-
-**Q8. Why is RMSE more useful than MSE?**  
-A: RMSE is the square root of MSE, which brings it back to the same units as the target variable (dollars). This makes it easier to interpret — RMSE = $200 means the typical prediction error is about $200, which is directly meaningful.
-
-**Q9. What did you find about the impact of discounts on profit?**  
-A: There is a clear negative correlation between discount and profit. As discounts increase beyond 20–30%, profit drops significantly. Some heavily discounted orders generate near-zero or negative profit. This suggests businesses should cap discounts at around 20%.
-
-**Q10. Which features were most important for predicting sales?**  
-A: According to the Random Forest feature importance, Unit_Price and Quantity are the strongest predictors. This makes mathematical sense since Sales ≈ Unit_Price × Quantity × (1-Discount). Category and Month also contribute meaningfully through seasonality and price range differences.
-
-**Q11. What are the seasonal patterns in the data?**  
-A: Sales peak in November and December due to holiday shopping. There are also smaller peaks in March–April. January and February are typically the slowest months. Businesses should plan inventory increases before Q4.
-
-**Q12. What is your AI-based insight engine?**  
-A: It is a local, rule-based Python system that inspects the actual computed metrics (top category, regional performance, discount correlation, etc.) and automatically generates natural-language business recommendations. No external AI API is used — everything runs locally.
-
-**Q13. What is the difference between Random Forest and Gradient Boosting?**  
-A: Both are ensemble methods using multiple decision trees. Random Forest builds trees in parallel and averages their predictions (bagging). Gradient Boosting builds trees sequentially, where each tree corrects the errors of the previous one (boosting). Gradient Boosting often achieves higher accuracy but is more prone to overfitting if not tuned.
-
-**Q14. How would you deploy this project in a real business?**  
-A: I would export the best-performing ML model using joblib, wrap it in a FastAPI or Flask REST API, and build a Streamlit or Power BI dashboard connected to live sales data. The analytics pipeline could be scheduled with Apache Airflow for daily or weekly refresh.
-
-**Q15. What are the limitations of your project?**  
-A: The main limitations are: (1) synthetic data may not capture all real-world complexities; (2) no external economic factors are included; (3) simple label encoding is used instead of more sophisticated encoding; (4) only regression models are explored — time-series models like ARIMA or Prophet might give better seasonal forecasting.
+### R² — Coefficient of Determination
+**Formula:** 1 - (Sum of squared residuals) / (Total sum of squares)
+**Range:** 0 to 1 (can be negative for very poor models)
+**Interpretation:**
+- R² = 1.0: perfect prediction
+- R² = 0.9: model explains 90% of variance in Sales
+- R² = 0.0: model is no better than always predicting the mean Sales value
+**IMPORTANT:** R² = 0.98 means "the model explained 98% of the variance." It does NOT mean "98% accurate."
 
 ---
 
-## PART 13: 10 Questions an Evaluator May Ask About Project Selection
+## PART 12: Automated Business Insight Engine Explanation
 
-**Q1. Why did you select a sales analytics project for your internship?**  
-A: Sales analytics is one of the most directly applicable domains for data science in business. Almost every organisation has transactional data, and the ability to extract insights from it — whether for pricing, inventory, or marketing decisions — is a highly valued skill. This project gave me hands-on experience with the complete analytics lifecycle.
+**What it is:**
+A local, rule-based Python function that programmatically reads the actual computed metrics from the analysis and generates structured natural-language business observations.
 
-**Q2. What real-world problem does this project solve?**  
-A: It solves the challenge of converting raw transactional data into structured, actionable business intelligence. Specifically, it helps retail managers understand which products, regions, and customer segments drive revenue and profit — and predicts future sales to enable better planning.
+**What it is NOT:**
+- Not ChatGPT, Gemini, IBM Watson, or any generative AI
+- Not a neural network or language model
+- Not connected to any external API
 
-**Q3. What was the most challenging part of this project?**  
-A: The most challenging part was ensuring the ML features were meaningful and not causing data leakage. For example, I had to be careful not to include Sales-derived features as inputs to a model that predicts Sales. The feature selection process required careful thought about what a business would actually know before a sale.
+**How it works:**
+```
+1. Read actual computed values (revenue totals, rankings, correlations)
+2. Apply business domain rules (if top_category == X, state X leads revenue)
+3. Apply data-derived thresholds (75th percentile discount level)
+4. Format observations as readable text
+5. Print numbered insight list
+```
 
-**Q4. How is this project relevant to the IBM SkillsBuild curriculum?**  
-A: IBM SkillsBuild covers data analytics, AI fundamentals, and Python programming. This project applies all three: Python for implementation, data analytics for EDA and business insights, and AI/ML for sales prediction. It directly demonstrates the skills taught in the programme.
+**Why this is still a valid "AI" component:**
+Rule-based expert systems are a classical branch of Artificial Intelligence. The system applies domain knowledge (business rules) to transform data into decisions — which is the fundamental definition of AI. It's transparent, reproducible, and academically honest.
 
-**Q5. Could this project work with real company data?**  
-A: Yes. The entire pipeline is designed to be data-agnostic. By replacing the synthetic CSV with a real company's sales export (after appropriate anonymisation), all the analysis, visualisations, and ML models would work without code changes, assuming similar column names.
+---
 
-**Q6. How did you ensure the quality and accuracy of your analysis?**  
-A: I verified every step: the dataset was validated before analysis, all ML metrics were computed from actual test-set predictions (not training data), all charts use real computed values (no manual numbers), and the AI insight engine reads from actual metric variables rather than hard-coded statements.
+## PART 13: 15 Viva Questions and Answers
 
-**Q7. Why is the AI component important in this project?**  
-A: Pure analytics tells you what happened. AI extends this by predicting what will happen (ML models) and explaining what actions to take (insight engine). The combination of descriptive, predictive, and prescriptive analytics makes this a complete business intelligence solution.
+**Q1. What is the main objective of your project?**
+A: To analyse a 10,000-record synthetic retail sales dataset using data analytics and machine learning. The project computes KPIs, creates professional visualisations, answers 14 business questions, trains a per-order Sales prediction model, and generates automated business insights — all without external AI APIs.
 
-**Q8. Why did you choose Python over tools like Excel or Tableau?**  
-A: Python provides full control, reproducibility, and scalability. Unlike Excel, Python can handle millions of records and automate complex analysis. Unlike Tableau, Python allows building custom ML models. Python also integrates all steps — data cleaning, analysis, visualisation, and modelling — in a single environment.
+**Q2. Why is your dataset synthetic? Why not use the actual Kaggle dataset?**
+A: The Kaggle Superstore Sales Dataset requires account authentication and download. Using a synthetic dataset generated in Python avoids this dependency, ensures the project runs completely offline, and lets me demonstrate data generation skills. The synthetic data is modelled on the same structural pattern. I clearly document it as synthetic in all project files.
 
-**Q9. What did you learn from doing this project?**  
-A: I learned the complete data science workflow from data generation to insight generation. I deepened my understanding of how ML regression works, how to evaluate and compare models, and how to translate statistical findings into business language that non-technical stakeholders can understand.
+**Q3. What is the difference between your "actual dataset" and the Kaggle reference?**
+A: The actual dataset is data/sales_data.csv, generated by data/generate_dataset.py. The Kaggle dataset (https://www.kaggle.com/datasets/himanshuuike/superstore-sales-dataset) is cited only as a structural reference for the column design. This project does not download or analyse the Kaggle file.
 
-**Q10. If you had more time, what would you add to this project?**  
-A: I would add a time-series forecasting model (like Facebook Prophet) for more accurate seasonal predictions, a customer segmentation component using K-Means clustering, and a live Streamlit dashboard connected to a database for real-time analytics. I would also hyperparameter-tune the ML models for better performance.
+**Q4. What is target leakage and how did you prevent it?**
+A: Target leakage occurs when information derived from the target variable (Sales) is used as an input feature, causing the model to appear better than it really is. I prevented leakage by excluding Profit, Profit_Margin, Revenue, and Discount_Amount from model inputs — all of these are calculated from Sales. Only pre-transaction attributes (Category, Region, Quantity, Price, Discount, etc.) are used.
+
+**Q5. Why did you use a ColumnTransformer and Pipeline instead of LabelEncoder?**
+A: LabelEncoder assigns arbitrary integer codes to categories, implying an ordinal relationship that doesn't exist (e.g., Technology=2 is not "greater than" Furniture=0). OneHotEncoding creates a proper binary column for each category. A Pipeline ensures the preprocessing is applied consistently and reproducibly to both training and test data, preventing leakage and simplifying the workflow.
+
+**Q6. What does R² = 0.98 mean?**
+A: It means the model explains 98% of the variance in Sales on the held-out test set. It does NOT mean "98% accurate" — accuracy is a classification metric. R² measures how well the model's predictions track the actual variation in the target variable.
+
+**Q7. Why are Random Forest and Gradient Boosting better than Linear Regression for this task?**
+A: Because the relationship between features and Sales is non-linear. Sales depends on Price × Quantity × (1-Discount) with seasonal adjustments — this is a multiplicative, non-linear relationship. Linear Regression can only model additive linear combinations, while Random Forest and Gradient Boosting can approximate non-linear functions through ensembles of decision trees.
+
+**Q8. What is the difference between Random Forest and Gradient Boosting?**
+A: Random Forest builds all trees independently in parallel, each on a bootstrap sample, and averages their predictions (bagging). Gradient Boosting builds trees sequentially, with each tree correcting the residual errors of the previous one (boosting). Gradient Boosting often achieves lower error but is slower and more sensitive to hyperparameters.
+
+**Q9. What is the Automated Business Insight Engine?**
+A: It is a local, rule-based Python function that reads actual computed metrics and generates natural-language business observations. It is not an external AI API. This approach is academically honest — I don't claim Gemini, ChatGPT, or IBM Watson is used. Rule-based expert systems are a classical form of AI.
+
+**Q10. What is the seasonal pattern in your data?**
+A: Sales are highest in November and December, confirming a holiday-season demand spike. There are also smaller peaks in Q1 of some years. January and February are consistently the lowest-sales months. This pattern was confirmed through both the monthly trend chart and the Year × Month heatmap.
+
+**Q11. How does the discount level affect profit?**
+A: The Discount–Profit correlation is negative (approximately -0.3 to -0.4). Additionally, orders at the 75th percentile discount level and above show meaningfully lower average profit compared to the overall average. The Discount vs Profit scatter plot visually confirms this negative relationship.
+
+**Q12. Is your project a time-series forecasting project?**
+A: No. The ML model predicts Sales for individual orders given their attributes — this is per-order regression, not time-series forecasting. Time-series forecasting (predicting total revenue for a future period using ARIMA, Prophet, etc.) is mentioned as a future scope item.
+
+**Q13. What features does your ML model use?**
+A: Numerical: Month, Quarter, Year, Quantity, Discount, Unit_Price. Categorical (OneHotEncoded): Category, Region, Segment, Ship_Mode, Payment_Method. Total of 11 raw features, expanding to more binary columns after OneHotEncoding.
+
+**Q14. Why is Ship_Mode and Payment_Method included as a feature?**
+A: Both are known at the time of order creation and could plausibly correlate with order characteristics. For example, Same Day shipping may be more common for urgent, higher-value Technology orders. Including them adds information the model can use to better predict Sales.
+
+**Q15. What would you improve with more time?**
+A: I would add time-series forecasting with ARIMA or Facebook Prophet for period-level revenue prediction, implement hyperparameter tuning with GridSearchCV, add customer segmentation using K-Means clustering, and deploy the best model as a REST API using FastAPI for production use.
+
+---
+
+## PART 14: 10 Questions an Evaluator May Ask About Project Selection
+
+**Q1. Why did you choose sales analytics as your internship project?**
+A: Sales data analytics is one of the most universally applicable domains in data science — every business has transactional data. The skills demonstrated here (data cleaning, EDA, ML regression, automated insights) are directly transferable to any industry and any organisation. The project covers the complete analytics lifecycle end-to-end.
+
+**Q2. What real-world problem does this project solve?**
+A: It solves the challenge of converting raw transactional data into structured, evidence-based business intelligence — identifying which products, categories, and regions drive revenue, understanding seasonal patterns, quantifying discount impact on profitability, and providing a tool to estimate per-order revenue.
+
+**Q3. Why did you use three ML models instead of one?**
+A: Using a single model doesn't tell you whether it's the best choice. By comparing Linear Regression, Random Forest, and Gradient Boosting, I demonstrate systematic model selection: the baseline (Linear Regression) sets a minimum performance expectation; the ensemble models show how much more performance is achievable; the comparison identifies the best model for deployment.
+
+**Q4. How is this project relevant to IBM SkillsBuild training?**
+A: IBM SkillsBuild covers Python, data analytics, and AI fundamentals. This project applies all three: Python for the complete implementation, data analytics for EDA and business insights, and AI/ML for supervised regression modelling. The project demonstrates the skills taught in the programme with a working, complete deliverable.
+
+**Q5. How did you ensure academic integrity in your project?**
+A: All metrics are computed from actual data — nothing is hard-coded or fabricated. The dataset is clearly documented as synthetic. No external AI API is falsely claimed. The Kaggle reference is clearly labelled as reference only. The ML pipeline uses proper train/test splitting and leakage prevention.
+
+**Q6. Could this project scale to a real business environment?**
+A: Yes. The pipeline is data-agnostic. Replacing data/sales_data.csv with a real company's sales export (with similar column structure) would allow the same analysis to run on real data. The ML model could be exported with joblib and deployed as an API endpoint for integration into business systems.
+
+**Q7. What was the most technically challenging part?**
+A: Correctly implementing the scikit-learn Pipeline with ColumnTransformer to handle mixed feature types (numerical passthrough + categorical OneHotEncoding) while ensuring no data leakage between training and test sets. Getting feature importance from the Random Forest within the pipeline also required navigating the Pipeline's named steps structure.
+
+**Q8. How do you know your ML model is not overfitting?**
+A: By evaluating exclusively on the held-out 20% test set that was never seen during training. If the model were severely overfitting, test-set R² would be significantly lower than training R². The evaluation was performed only on the test split.
+
+**Q9. Why did you use a synthetic dataset rather than claiming to use the Kaggle dataset?**
+A: Academic honesty. If I had downloaded the Kaggle dataset and claimed it was my own, or misrepresented it, that would be dishonest. Using and clearly documenting a synthetic dataset demonstrates data generation skills, ensures reproducibility, and maintains full integrity about what data was analysed.
+
+**Q10. What would you add if this were a commercial project?**
+A: A CI/CD pipeline for automated notebook execution on new data, a REST API wrapper around the trained model (FastAPI), a real-time Streamlit dashboard connected to a live database, time-series forecasting for demand planning, and an A/B testing framework to evaluate the impact of discount policy changes recommended by the analysis.
 
 ---
 

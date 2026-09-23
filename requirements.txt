@@ -7,4 +7,3 @@ jupyter
 nbformat
 nbconvert
 python-docx
-openpyxl
