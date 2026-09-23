@@ -216,7 +216,7 @@ def generate_record(order_id: int, customer_map: dict) -> dict:
 
     segment = random.choice(SEGMENTS)
     region = random.choice(list(REGIONS.keys()))
-    state = random.choice(REGIONS[region])
+    city = random.choice(REGIONS[region])
 
     # ── Product ──
     category = random.choice(list(CATEGORIES.keys()))
@@ -258,7 +258,7 @@ def generate_record(order_id: int, customer_map: dict) -> dict:
         "Customer_Name": customer_name,
         "Segment": segment,
         "Region": region,
-        "State": state,
+        "City": city,
         "Category": category,
         "Sub_Category": sub_cat,
         "Product_Name": product_name,

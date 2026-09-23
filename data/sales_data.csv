@@ -1,4 +1,4 @@
-Order_ID,Order_Date,Ship_Date,Ship_Mode,Customer_ID,Customer_Name,Segment,Region,State,Category,Sub_Category,Product_Name,Quantity,Unit_Price,Discount,Sales,Profit,Payment_Method
+Order_ID,Order_Date,Ship_Date,Ship_Mode,Customer_ID,Customer_Name,Segment,Region,City,Category,Sub_Category,Product_Name,Quantity,Unit_Price,Discount,Sales,Profit,Payment_Method
 ORD-08913,2021-01-01,2021-01-05,Second Class,CUST-0122,Patricia Robinson,Corporate,West,San Francisco,Technology,Computers,Lenovo ThinkPad X1 Carbon,7,1426.51,0.3,5242.42,792.59,Cheque
 ORD-02614,2021-01-01,2021-01-06,Standard Class,CUST-0999,Mary Thompson,Corporate,South,Atlanta,Furniture,Chairs,Serta Big & Tall Chair,4,353.82,0.1,955.31,83.64,Online Transfer
 ORD-01226,2021-01-01,2021-01-01,Same Day,CUST-0488,Patricia Johnson,Home Office,Central,Houston,Furniture,Furnishings,Fellowes Shredder,1,142.15,0.3,74.63,5.13,COD

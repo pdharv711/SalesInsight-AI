@@ -353,8 +353,8 @@ A: Target leakage occurs when information derived from the target variable (Sale
 **Q5. Why did you use a ColumnTransformer and Pipeline instead of LabelEncoder?**
 A: LabelEncoder assigns arbitrary integer codes to categories, implying an ordinal relationship that doesn't exist (e.g., Technology=2 is not "greater than" Furniture=0). OneHotEncoding creates a proper binary column for each category. A Pipeline ensures the preprocessing is applied consistently and reproducibly to both training and test data, preventing leakage and simplifying the workflow.
 
-**Q6. What does R² = 0.98 mean?**
-A: It means the model explains 98% of the variance in Sales on the held-out test set. It does NOT mean "98% accurate" — accuracy is a classification metric. R² measures how well the model's predictions track the actual variation in the target variable.
+**Q6. What does R² = 0.9873 mean, and why is it relatively high?**
+A: It means the Gradient Boosting model explains 98.73% of the variance in per-order Sales on the held-out test set. It does NOT mean "98.7% accurate" — accuracy is a classification metric, while R² measures variance explained in regression. The score is relatively high because the synthetic dataset contains structured mathematical relationships between transaction features (Price × Quantity × Discount × Seasonality) and Sales. On noisy real-world retail data with unobserved human factors, R² would typically be lower, which I have documented under project limitations.
 
 **Q7. Why are Random Forest and Gradient Boosting better than Linear Regression for this task?**
 A: Because the relationship between features and Sales is non-linear. Sales depends on Price × Quantity × (1-Discount) with seasonal adjustments — this is a multiplicative, non-linear relationship. Linear Regression can only model additive linear combinations, while Random Forest and Gradient Boosting can approximate non-linear functions through ensembles of decision trees.

@@ -195,10 +195,11 @@ Evaluated on the 20% held-out test set. Actual metrics computed when notebook is
 > These values were computed by executing the notebook on the synthetic dataset.  
 > Re-running the notebook with `random_state=42` will reproduce these exact metrics.
 
-**Metric interpretation:**
+**Understanding Model Performance:**
 - **MAE:** Average absolute prediction error per order (in USD)
 - **RMSE:** Typical prediction error per order (in USD, penalises large errors)
-- **R²:** Proportion of variance in Sales explained by the model (0–1)
+- **R²:** Proportion of variance in Sales explained by the model on the held-out test set (0–1).
+- **Note on High R²:** Because the synthetic dataset contains structured mathematical relationships between transaction attributes and Sales, model performance is stronger than would typically occur on noisy real-world retail data. R² is a measure of variance explained, not classification accuracy.
 
 ---
 
@@ -251,8 +252,8 @@ All recommendations are derived from the analysis:
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/AI-Sales-Analytics.git
-cd AI-Sales-Analytics
+git clone https://github.com/pdharv711/SalesInsight-AI.git
+cd SalesInsight-AI
 
 # Create virtual environment (recommended)
 python -m venv venv
