@@ -55,3 +55,6 @@ src/
 
 # Generated chart images (optional - they are reproduced by the notebook)
 notebooks/*.png
+
+# Source Code foldeer
+/src/
