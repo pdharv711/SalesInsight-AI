@@ -49,7 +49,7 @@ credentials.json
 token.json
 secrets.yaml
 api_keys.txt
-
+src/
 # Large data files (if not tracked)
 # data/*.csv
 
